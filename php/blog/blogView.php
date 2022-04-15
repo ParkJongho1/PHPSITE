@@ -51,6 +51,7 @@
                     <span class="modify"><a href="blogModify.php?blogID=<?=$blogID?>">수정</a></span>
                     <span class="delete"><a href="blogRemove.php?blogID=<?=$blogID?>" onclick="return noticeRemove();">삭제</a></span>
                     <?php  } ?>
+                    
                 </div>
             </div> 
             <div class="container">
@@ -82,6 +83,25 @@
             let notice = confirm("정말 삭제하시겠습니까?", "");
             return notice;
         }
+        function boardLike(blogID){
+            console.log(blogID)
+            $.ajax({
+            type : "POST",           
+            url : "bloglikeCheck.php",     
+            data : { "blogID" : blogID},     
+            success : function(data){ 
+                document.querySelector(".like_text").innerHTML = data;
+            },
+            error : function(request, status, error){
+                console.log("request" + request);
+                console.log("status" + status);
+                console.log("error" + error);
+            }
+            });
+        }
+
+
+
     </script>
 </body>
 </html>
