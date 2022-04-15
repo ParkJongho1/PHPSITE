@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판</title>
+
+    <!-- META -->
+    <meta name="acthor" content="webstroyboy">
+    <meta name="description" content="웹 표준을 준수한 사이트입니다.">
+    <meta name="keywords" content="웹표준, 웹접근성, 웹호환성, 사이트제작, 사이트만들기, 포트폴리오">
+    <meta name="robots" content="all">
+
+    <!-- 아이콘 & 파비콘 -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="apple-touch-icon" href="img/icon114.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/icon114.png">
+    <link rel="apple-touch-icon-precomposed" href="img/icon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="167x167" href="img/icon167.png">
+
+    <!-- CSS style -->
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body>
+    <div id="skip">
+        <a href="#main">컨텐츠 바로가기</a>
+        <a href="#footer">푸터 바로가기</a>
+    </div>
+    <!--  //skip -->
+
+    <!-- header -->
+    <header id="header">
+        <h1 class="logo">
+            <a href="#">PHP <em>class</em></a>
+        </h1>
+        <nav class="menu">
+            <h2 class="ir_so">메인 메뉴</h2>
+            <ul>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">댓글</a></li>
+                <li><a href="#">게시판</a></li>
+                <li><a href="#">블로그</a></li>
+                <li><a href="#">관리자</a></li>
+            </ul>
+        </nav>
+        <div class="member">
+            <a href="#">회원가입</a>
+            <a href="#">로그인</a> 
+        </div>
+    </header>
+    <!-- //header -->
+
+    <!-- main -->
+    <main id="contents">
+        <h2 class="ir_so">컨텐츠 영역</h2>
+        <section id="board-type" class="section center mb100">
+            <div class="container">
+                <h3 class="section__title">축구 게시판</h3>
+                <p class="section__desc">축구와 관련된 게시판입니다. 궁금한 점은 여기를 확인하세요!</p>
+                <div class="board__inner">
+                    <div class="board__search">
+                        <form action="boardSearch.php" name="boardSearch" method="get">
+                            <fieldset>
+                                <legend class="ir_so">게시판 검색 영역</legend>
+                                <div>
+                                    <input type="search" name="search-form" class="search-form" placeholder="검색어를 입력하세요!" aria-label="search" required>
+                                </div>
+                                <div>
+                                    <select name="search-option" class="search-option">
+                                        <option value="title">제목</option>
+                                        <option value="content">내용</option>
+                                        <option value="name">등록자</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <button type="submit"class="search-btn">검색</button>
+                                </div>
+                                <div>
+                                    <a href="boardWrite.php" class="search-btn black">글쓰기</a>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="board__table">
+                        <table class="hover">
+                            <thead>
+                                <colgroup>
+                                    <col style="width: 5%"> 
+                                    <col> 
+                                    <col style="width: 10%"> 
+                                    <col style="width: 12%"> 
+                                    <col style="width: 7%"> 
+                                </colgroup>
+                                <tr>
+                                    <th>번호</th>
+                                    <th>제목</th>
+                                    <th>등록자</th>
+                                    <th>등록일</th>
+                                    <th>조회수</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td class="left">축구 게시판입니다. 많은 사용 부탁드려요~</td>
+                                    <td>박종호</td>
+                                    <td>2022-03-04</td>
+                                    <td>990</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td class="left">첼시팬입니다! 많은 관심 부탁드려요~</td>
+                                    <td>채지훈</td>
+                                    <td>2022-03-04</td>
+                                    <td>50</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td class="left">리버풀 팬이에요~ 제글 많이 읽어주세요!</td>
+                                    <td>양우송</td>
+                                    <td>2022-02-27</td>
+                                    <td>330</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td class="left">EPL 중계는 어디서 보나요?</td>
+                                    <td>오승균</td>
+                                    <td>2022-01-04</td>
+                                    <td>41</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td class="left">저는 아스날팬입니다! 이번엔 누구를 영입할까요!?</td>
+                                    <td>임윤기</td>
+                                    <td>2022-02-21</td>
+                                    <td>60</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td class="left">아스톤 빌라팬이에요! 많은 소통나눠요!</td>
+                                    <td>윤정빈</td>
+                                    <td>2022-03-04</td>
+                                    <td>1000</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td class="left">축구 게시판입니다. 많은 사용 부탁드려요~</td>
+                                    <td>웹쓰</td>
+                                    <td>2022-03-04</td>
+                                    <td>60</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td class="left">축구 게시판입니다. 많은 사용 부탁드려요~</td>
+                                    <td>웹쓰</td>
+                                    <td>2022-03-04</td>
+                                    <td>17</td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td class="left">축구 게시판입니다. 많은 사용 부탁드려요~</td>
+                                    <td>웹쓰</td>
+                                    <td>2022-03-04</td>
+                                    <td>777</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td class="left">축구 게시판입니다. 많은 사용 부탁드려요~</td>
+                                    <td>웹쓰</td>
+                                    <td>2022-03-04</td>
+                                    <td>100</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="board__pages">
+                        <ul>
+                            <li><a href="#">처음으로</a></li>
+                            <li><a href="#">이전</a></li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">6</a></li>
+                            <li><a href="#">다음</a></li>
+                            <li><a href="#">마지막으로</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- //main -->
+
+    <!-- footer -->
+    <footer id="footer" class="footer gray">
+        <div class="container">
+            <h2 class="ir_so">푸터 바로가기 메뉴</h2>
+            <div class="footer-menu">
+                <div>
+                    <h3>레이아웃 영역</h3>
+                    <ul>
+                        <li><a href="#">레이아웃 유형01</a></li>
+                        <li><a href="#">레이아웃 유형02</a></li>
+                        <li><a href="#">레이아웃 유형03</a></li>
+                        <li><a href="#">레이아웃 유형04</a></li>
+                        <li><a href="#">레이아웃 유형05</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>메뉴 영역</h3>
+                    <ul>
+                        <li><a href="#">메뉴 유형01</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>메인 영역</h3>
+                    <ul>
+                        <li><a href="#">이미지 유형01</a></li>
+                        <li><a href="#">동영상 유형02</a></li>
+                        <li><a href="#">슬라이드 유형03</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>컨텐츠 영역</h3>
+                    <ul>
+                        <li><a href="#">텍스트 유형01</a></li>
+                        <li><a href="#">이미지 유형02</a></li>
+                        <li><a href="#">이미지/텍스트 유형03</a></li>
+                        <li><a href="#">카드 유형04</a></li>
+                        <li><a href="#">배너 유형05</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>게시판 영역</h3>
+                    <ul>
+                        <li><a href="board.html">게시판</a></li>
+                        <li><a href="boardView.html">게시판 보기</a></li>
+                        <li><a href="boardModify.html">게시판 수정</a></li>
+                        <li><a href="boardWrite.html">게시판 쓰기</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>사이트</h3>
+                    <ul>
+                        <li><a href="#">웹표준 사이트</a></li>
+                        <li><a href="#">반응형 사이트</a></li>
+                        <li><a href="#">패럴랙스 사이트</a></li>
+                        <li><a href="#">포트폴리오 사이트</a></li>
+                    </ul>
+                </div>
+            </div>
+            <address class="footer-rights">
+                &copy; 2022 ParkJongho. All rights reserved.
+            </address>
+        </div>
+    </footer>
+    <!-- //footer -->
+</body>
+</html>

@@ -1,0 +1,8 @@
+
+if($memberInfo['youPass'] == $youPass && $memberInfo['memberID'] == $memberID){
+    //수정
+    $sql = "UPDATE myMember SET youEmail = '{$youEmail}', youName = '{$youName}', youBirth = '{$youBirth}', youPhone = '{$youPhone}', youGender = '{$youGender}', youIntro = '{$youIntro}', youSite = '{$youSite}', youPhoto = '{$myPagePhoto}' WHERE memberID = '{$memberID}'";
+    $connect -> query($sql);
+} else {
+    echo "<script>alert('비밀번호가 일치하지 않습니다. 다시 한번 확인해 주세요.'); history.back(1)</script>";
+}
