@@ -122,7 +122,7 @@
 
 
 
-    <h2 class="ir_so">컨텐츠 영역</h2>
+    <h2 class="ir_so">컨텐츠 영역</h2> 
         <section id="blog-type" class="section center type">
             <div class="container">
                 <h3 class="section__title">축구 블로그</h3>

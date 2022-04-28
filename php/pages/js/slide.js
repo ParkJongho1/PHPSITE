@@ -25,12 +25,32 @@ let interval = 3000;
 sliderInner.appendChild(cloneFirst);
 sliderInner.insertBefore(cloneLast, slideFirst);
 
+let sliderMoving = false;
+
+// function gotoSlider(index){
+//     sliderInner.classList.add("transition");
+//     sliderInner.style.left = -sliderWidth * (index+1) + "%";
+//     currentIndex = index;
+//     dotActive();
+// };
+
 function gotoSlider(index){
-    sliderInner.classList.add("transition");
-    sliderInner.style.left = -sliderWidth * (index+1) + "%";
-    currentIndex = index;
-    dotActive();
+    if(!sliderMoving){
+        sliderInner.classList.add("transition");
+        sliderInner.style.left = -sliderWidth * (index+1) + "%";
+        currentIndex = index;
+        sliderMoving = true;
+        dotActive();
+        moving();
+    }
+
 };
+
+function moving(){
+    setTimeout(() => {
+        return sliderMoving = false;
+    }, 700);
+}
 
 function dotInit(){
     for(let i=0; i<sliderLength; i++){
