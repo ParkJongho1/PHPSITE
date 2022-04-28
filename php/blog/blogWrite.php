@@ -49,6 +49,7 @@
                                         <option value="bundesliga">분데스리가</option>
                                         <option value="Ligue1">리그앙</option>
                                     </select>
+                                </div>   
                                 <div>
                                     <label for="blogTitle">제목</label>
                                     <input type="text" name="blogTitle" id="blogTitle" placeholder="제목을 넣어주세요" required>
